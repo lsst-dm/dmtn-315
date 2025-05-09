@@ -38,4 +38,4 @@ jobs:
           LTD_PASSWORD: ${{ secrets.LTD_PASSWORD }}
           LTD_USERNAME: ${{ secrets.LTD_USERNAME }}
         run: |
-          lander --upload --pdf DMTN-315.pdf --lsstdoc DMTN-315.tex --ltd-product dmtn-315
+          lander --upload --pdf DMTN-315.pdf --author "Eric C. Bellm" --lsstdoc DMTN-315.tex --ltd-product dmtn-315
