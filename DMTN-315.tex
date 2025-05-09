@@ -34,6 +34,10 @@
 
 \setDocAbstract{%
 We evaluate the contamination rate of DIASources by unmasked cosmic rays, with implications for the snaps observing mode.
+
+We estimate that after filtering on CR pixel flags and apply a reliability score threshold, fewer than 3\% of real ComCam transients would be due to unmasked CRs.  
+We outline several straightforward steps to further improve rejection performance on LSSTCam.
+Data taken in snaps mode does not appear to be a panacea due to non-CR changes in alignment, PSF, saturation, etc.\ between the two snaps.
 }
 
 % Change history defined here.
@@ -61,10 +65,6 @@ The baseline plan for Rubin Observatory was to use ``snaps''--two consecutive ex
 Other surveys have instead utilized morphological algorithms and/or machine learning to identify and mask CRs based on their sharp features.
 
 Given the high cost in observing time of the snaps mode, which requires an additional 2 second read in the middle of the snap pair and costs about 7\% of the available survey time, in this technote we evaluate the contamination rate of DIASources by unmasked CRs.
-
-We estimate that after filtering on CR pixel flags and apply a reliability score threshold, fewer than 3\% of real ComCam transients would be due to unmasked CRs.  
-We outline several straightforward steps to further improve rejection performance on LSSTCam.
-Data taken in snaps mode does not appear to be a panacea due to non-CR changes in alignment, PSF, saturation, etc.\ between the two snaps.
 
 
 \section{Pipelines and Data} \label{sec:pipelines}
