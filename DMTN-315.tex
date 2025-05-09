@@ -62,6 +62,11 @@ Other surveys have instead utilized morphological algorithms and/or machine lear
 
 Given the high cost in observing time of the snaps mode, which requires an additional 2 second read in the middle of the snap pair and costs about 7\% of the available survey time, in this technote we evaluate the contamination rate of DIASources by unmasked CRs.
 
+We estimate that after filtering on CR pixel flags and apply a reliability score threshold, fewer than 3\% of real ComCam transients would be due to unmasked CRs.  
+We outline several straightforward steps to further improve rejection performance on LSSTCam.
+Data taken in snaps mode does not appear to be a panacea due to non-CR changes in alignment, PSF, saturation, etc.\ between the two snaps.
+
+
 \section{Pipelines and Data} \label{sec:pipelines}
 
 We used the DRP processing of ComCam data conducted on DM-49235 using weekly \texttt{w\_2025\_09}.
@@ -87,7 +92,7 @@ In total, the sample contained 99 real transients and 54 CRs\footnote{There were
 The raw bogus:real ratio is thus about 9:1.}.
 
 While at first glance the contimanation by CRs seems high, further filtering can remove many of the CRs.
-Of the 54 CRs, 47 had \texttt{pixelFlags_crCenter = True}, in contrast to only 1 transient.
+Of the 54 CRs, 47 had \texttt{pixelFlags_crCenter \= True}, in contrast to only 1 transient.
 It appears that the majority of the CRs producing false positives are on the edges of larger CRs which have been masked by the morphological algorithm.
 While they have not been properly interpolated, the presence of the CR pixel flag can effectively identify them.
 
